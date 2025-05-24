@@ -1,0 +1,250 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+  transition: background 0.3s ease;
+}
+
+#search {
+
+    position: absolute;
+    left: 250%;
+    z-index: 4; 
+}
+
+#go {
+
+    position: absolute;
+    left: 300%;
+    z-index: 5; 
+}
+
+
+.nav-bar {
+  position: relative; /* needed so the absolutely-positioned image stays within */
+  background-color: #333;
+  padding: 10px 2%;
+  height: 60px; /* or adjust as needed */
+  display: flex;
+  align-items: center;
+  z-index: 1; 
+}
+
+#logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-right: 20px;
+  z-index: 1; 
+}
+
+#pic {
+  position: absolute;
+  top: 10px;     /* move vertically from top */
+  left: 160px;   /* move horizontally from left */
+  width: 75px;   /* resize as needed */
+  height: auto;
+  pointer-events: none; /* optional: prevent interaction */
+  z-index: 1; 
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  z-index: 1; 
+}
+
+.nav-center a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-center a:hover {
+  text-decoration: underline;
+}
+
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left-img {
+  width: 180px;
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left-img img {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+}
+
+.right-bar {
+  width: 120px;
+  background-color: #993300;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.intro-box {
+  background-color: #ffffcc;
+  border: 1px solid #cccc99;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  animation: fadeIn 1s ease;
+}
+
+.destination-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff7ef;
+  border-left: 4px solid orange;
+  padding: 10px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s;
+}
+
+.destination-box:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.destination-inner {
+  display: flex;
+}
+
+.destination-box img {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease-in-out;
+}
+
+.destination-box img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.destination-info {
+  flex: 1;
+}
+
+.destination-info h3 {
+  margin: 0;
+  color: #cc6600;
+  font-size: 16px;
+}
+
+.destination-info p {
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.details-btn {
+  background: linear-gradient(90deg, #f0932b, #e84118);
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+a
+.details-btn:hover {
+  background: linear-gradient(90deg, #e58e26, #c23616);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.details-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.details-content.open {
+  max-height: 800px;
+  opacity: 1;
+  margin-top: 10px;
+  background-color: #fff0dc;
+  padding: 10px;
+  border: 1px solid #e0c4a1;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+ul {
+  margin: 5px 0 10px 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.see-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  background-color: #0055aa;
+  color: white;
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: background 0.3s;
+}
+
+.see-more-btn:hover {
+  background-color: #003f7d;
+}
+.sidebar-card {
+  background-color: #ffcc66;
+  padding: 10px;
+  font-size: 13px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.other-things-box {
+  background-color: #ff9900;
+  color: white;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}

@@ -1,0 +1,162 @@
+body {  
+  margin: 0;  
+  font-family: Arial, sans-serif;  
+  background-image: url('BgTrav.png'); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+}  
+
+.nav-bar {
+  position: relative; /* needed so the absolutely-positioned image stays within */
+  background-color: #333;
+  padding: 10px 2%;
+  height: 60px; /* or adjust as needed */
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-right: 20px;
+}
+
+#pic {
+  position: absolute;
+  top: 10px;     /* move vertically from top */
+  left: 160px;   /* move horizontally from left */
+  width: 75px;   /* resize as needed */
+  height: auto;
+  pointer-events: none; /* optional: prevent interaction */
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+}
+
+.nav-center a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-center a:hover {
+  text-decoration: underline;
+}
+
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.main {  
+  display: flex;  
+  flex-wrap: wrap;  
+  margin: 80px 20px 20px 20px;  
+  gap: 20px;  
+  border: 2px solid #03679a;
+  margin-left: 50px;
+}  
+
+.content {  
+  flex: 3;  
+  min-width: 300px;  
+  background-color: #f1efef;  
+  color: #140d0dd0;  
+  padding: 20px;  
+  border-radius: 10px;  
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);  
+}  
+
+.travel-log-content {  
+  display: flex;  
+  gap: 20px;  
+  align-items: center;  
+  margin-top: 10px;  
+}  
+
+.title-with-icon {  
+  display: flex;  
+  align-items: center;  
+  gap: 10px;  
+}  
+
+.title-with-icon h2 {  
+  margin: 0;  
+  font-size: 2.4em;  
+  font-weight: bolder;  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}  
+
+.title-icon {  
+  width: 180px;
+  height: auto;  
+}  
+
+/* Text style */  
+.travel-text {  
+  flex: 2;  
+}  
+
+.travel-text p {  
+  font-size: 1.2em;  
+}  
+
+.image-box {  
+  flex: 1;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+}  
+
+.image-box img {  
+  width: 100%;  
+  max-width: 300px;  
+  border-radius: 8px;  
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);  
+}  
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+  background-color: #922900;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  border: 2px solid #03679a;
+  margin-left: -20px;
+}
+
+.sidebar .sidebar-image img {
+  width: 100%;
+  max-width: 100%; 
+  height: auto; 
+  display: block;
+  box-sizing: border-box;
+  margin-top: 100px;
+}
+
+.sidebar .sidebar-text {  
+  margin-top: 60px;  
+}  
+
+@media(max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+}
